@@ -1,0 +1,12 @@
+// В исходной папке (hw5)
+ 
+git clone https://github.com/google/googletest.git
+ 
+// Должно получиться три папки: googletest, src, tests
+ 
+cd tests
+mkdir build
+cd build
+cmake ..
+make
+./runTests

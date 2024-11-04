@@ -1,3 +1,0 @@
-/home/wake/Documents/nsu/cpp/cpp_tasks/hw5/tests/build/CMakeFiles/runTests.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/hw5/tests/build/CMakeFiles/edit_cache.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/hw5/tests/build/CMakeFiles/rebuild_cache.dir

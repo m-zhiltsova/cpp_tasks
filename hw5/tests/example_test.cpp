@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "/home/wake/Documents/nsu/cpp/cpp_tasks/hw5/src/task.h"
+#include "./../src/task.h"
 
 TEST(TimeTest, Creation) {
     Time t1(10, 20, 30);
