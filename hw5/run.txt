@@ -8,5 +8,9 @@ cd tests
 mkdir build
 cd build
 cmake ..
+
+сборка без Gtests:  cmake -DBUILD_TEST=OFF ..
+
 make
 ./runTests
+

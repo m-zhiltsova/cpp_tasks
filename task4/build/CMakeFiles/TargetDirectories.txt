@@ -1,0 +1,5 @@
+/home/wake/Documents/nsu/cpp/cpp_tasks/task4/build/CMakeFiles/CSVParser.dir
+/home/wake/Documents/nsu/cpp/cpp_tasks/task4/build/CMakeFiles/runTests.dir
+/home/wake/Documents/nsu/cpp/cpp_tasks/task4/build/CMakeFiles/test.dir
+/home/wake/Documents/nsu/cpp/cpp_tasks/task4/build/CMakeFiles/edit_cache.dir
+/home/wake/Documents/nsu/cpp/cpp_tasks/task4/build/CMakeFiles/rebuild_cache.dir

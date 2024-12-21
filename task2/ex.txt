@@ -1,0 +1,5 @@
+#N Test Universe
+#R B3/S23
+0 0
+1 1
+2 2

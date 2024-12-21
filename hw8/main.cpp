@@ -1,103 +1,90 @@
 #include <iostream>
 #include <string>
 
-class GenericCreature {
+class generic {
 public:
-    std::string name;
-    GenericCreature(const std::string& n) : name(n) {
-        std::cout << "GenericCreature constructor called for " << name << std::endl;
+    generic() {
+        std:: cout << "Generic Constructor called" << std:: endl;
     }
-    virtual ~GenericCreature() {
-        std::cout << "GenericCreature destructor called for " << name << std::endl;
-    }
-    virtual void move() { 
-        std::cout << name << " moves." << std::endl;
+    ~generic() {
+        std:: cout << "Generic Deconstructor called" << std:: endl;
     }
 };
 
-class OceanCreature : public GenericCreature {
+class ocean : public generic{
 public:
-    OceanCreature(const std::string& n) : GenericCreature(n) {
-        std::cout << "OceanCreature constructor called for " << name << std::endl;
+    ocean() {
+        std:: cout << "Ocean Constructor called" << std:: endl;
     }
-    ~OceanCreature() override {
-        std::cout << "OceanCreature destructor called for " << name << std::endl;
+    ~ocean() {
+        std:: cout << "Ocean Deconstructor called" << std:: endl;
     }
-    void swim() {
-        std::cout << name << " swims." << std::endl;
+
+    void swim () {
+        std:: cout << "I can swim" << std:: endl;
     }
 };
 
-class Amphibious : public OceanCreature {
+class amphibious : public ocean{
 public:
-    Amphibious(const std::string& n) : OceanCreature(n) {
-        std::cout << "Amphibious constructor called for " << name << std::endl;
+    amphibious() {
+        std:: cout << "Amphibious Constructor called" << std:: endl;
     }
-    ~Amphibious() override {
-        std::cout << "Amphibious destructor called for " << name << std::endl;
+    ~amphibious() {
+        std:: cout << "Amphibious Deconstructor called" << std:: endl;
     }
     void walk() {
-        std::cout << name << " walks." << std::endl;
+        std:: cout << "I can walk" << std:: endl;
     }
 };
 
-class TerrestrialCreature : public GenericCreature {
+class terrestrial : protected amphibious{
 public:
-    TerrestrialCreature(const std::string& n) : GenericCreature(n) {
-        std::cout << "TerrestrialCreature constructor called for " << name << std::endl;
+    terrestrial() {
+        std:: cout << "Terrestrial Constructor called" << std:: endl;
     }
-    ~TerrestrialCreature() override {
-        std::cout << "TerrestrialCreature destructor called for " << name << std::endl;
+    ~terrestrial() {
+        std:: cout << "Terrestrial Deconstructor called" << std:: endl;
     }
-    void walk() {
-        std::cout << name << " walks." << std::endl;
+    using amphibious::walk;
+};
+
+class bird : public terrestrial{
+public:
+    bird() {
+        std:: cout << "Bird Constructor called" << std:: endl;
+    }
+    ~bird() {
+        std:: cout << "Bird Deconstructor called" << std:: endl;
+    }
+    void fly () {
+        std:: cout << "I can fly" << std:: endl;
     }
 };
 
-class Bird : public TerrestrialCreature {
+class waterfowl: public bird{
 public:
-    Bird(const std::string& n) : TerrestrialCreature(n) {
-        std::cout << "Bird constructor called for " << name << std::endl;
+    waterfowl() {
+        std:: cout << "Waterfowl Constructor called" << std:: endl;
     }
-    ~Bird() override {
-        std::cout << "Bird destructor called for " << name << std::endl;
+    ~waterfowl() {
+        std:: cout << "Waterfowl Deconstructor called" << std:: endl;
     }
-    void fly() {
-        std::cout << name << " flies." << std::endl;
-    }
-};
-
-class Waterfowl : public Bird, public OceanCreature {
-public:
-    Waterfowl(const std::string& n) : Bird(n), OceanCreature(n) {
-        std::cout << "Waterfowl constructor called for " << Bird::name << std::endl;
-    }
-    ~Waterfowl() override {
-        std::cout << "Waterfowl destructor called for " << Bird::name << std::endl;
-    }
-    void move() override {
-        std::cout << Bird::name << " moves on land and water." << std::endl;
-    }
+    using bird :: swim;
 };
 
 int main() {
-    Waterfowl duck("Donald");
+    waterfowl duck;
     duck.swim();
     duck.fly();
     duck.walk();
-    duck.move();
 
-    Amphibious frog("Froggy");
+    amphibious frog;
     frog.swim();
     frog.walk();
 
-    TerrestrialCreature dog("Buddy");
-    dog.walk();
-
-    Bird eagle("Eagle");
-    eagle.walk();
-    eagle.fly();
-
+    terrestrial cat;
+    cat.walk();
+    //cat.swim(); // будет ошибка
     return 0;
 }
-
