@@ -1,5 +1,0 @@
-/home/wake/Documents/nsu/cpp/cpp_tasks/task2/with_google_tests2/build/CMakeFiles/Universe.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/task2/with_google_tests2/build/CMakeFiles/runTests.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/task2/with_google_tests2/build/CMakeFiles/test.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/task2/with_google_tests2/build/CMakeFiles/edit_cache.dir
-/home/wake/Documents/nsu/cpp/cpp_tasks/task2/with_google_tests2/build/CMakeFiles/rebuild_cache.dir
