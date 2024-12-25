@@ -1,4 +1,4 @@
-### Если нужно использовать тесты
+## Если нужно использовать тесты
 
 git clone https://github.com/google/googletest.git
 
@@ -13,7 +13,7 @@ make
 ./runTests
 
 
-### Если без тестов
+## Если без тестов
 
 g++ main.cpp CSVParser.cpp -o CSV
 
