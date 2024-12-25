@@ -1,3 +1,0 @@
-UniverseTest 0 0
----
-UniverseTest
